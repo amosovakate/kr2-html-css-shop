@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang = "ru">
+<head>
+    <meta charset = "UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Учебный интернет-магазин">
+    <meta property="og:description" content="Учебный frontend-проект интернет-магазина.">
+    <meta property="og:image" content="https://amosovakate.github.io/kr2-bootstrap-shop/images/preview.png">
+    <title>Учебный интернет-магазин</title> 
+    <link rel="stylesheet" href="css/custom.css">
+    <script src="js/main.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="site-header__logo" href="index.html">ShopProject</a>
+
+      <nav class="site-nav" aria-label="Основная навигация">
+        <ul class="site-nav__list">
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="index.html">Главная</a>
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link " href="catalog.html" >Каталог</a>
+          </li>
+          <li class="site-nav__item">
+              <a class="site-nav__link site-nav__link--active" href="product.html" aria-current="page">Карточки товаров</a>   
+          </li>
+          <li class="site-nav__item">
+              <a class="site-nav__link" href="reviews.html">Отзывы</a>   
+          </li>
+          <li class="site-nav__item">
+              <a class="site-nav__link" href="order.html">Заявка</a> 
+          </li>
+          <li class="site-nav__item">
+              <a class="site-nav__link" href="questions.html">Часто задаваемые вопросы</a>   
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="contacts.html">Контакты</a>
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="index.html#advantages">Преимущества</a>
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="index.html#contacts">Обратная связь</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+<main>
+    <main class="container">
+  
+  <!-- Хлебные крошки -->
+  <nav class="breadcrumbs">
+    <a href="#" class="breadcrumbs__link">Главная</a> / 
+    <a href="#" class="breadcrumbs__link">Каталог</a> / 
+    <span class="breadcrumbs__current">Товары</span>
+  </nav>
+
+  <!-- Заголовок страницы -->
+  <h1 class="page-title">Товары подробно</h1>
+  <p class="page-subtitle">Описание, цена и основные характеристики товаров учебного каталога.</p>
+
+    <!-- Список товаров -->
+    <div class="product-list">
+
+    <!-- Товар 1: Клавиатура -->
+    <article class="product-row">
+    <div class="product-row__image-wrapper">
+        <div class="product-row__image product-row__image--lamp">
+        <span>⌨️</span> <!-- Имитация картинки -->
+        </div>
+    </div>
+    <div class="product-row__content">
+        <span class="product-row__category">Периферия</span>
+        <h3 class="product-row__title">Клавиатура</h3>
+        <p class="product-row__desc">Механическая клавиатура с подсветкой и тихими переключателями. Идеальна для работы и учебы.</p>
+        
+        <div class="product-row__footer">
+        <p class="product-row__price">Цена: 3500 руб.</p>
+        <a href="order.html" class="button button--primary">Оформить заявку</a>
+        </div>
+    </div>
+    </article>
+
+    <!-- Товар 2: Мышка -->
+    <article class="product-row">
+    <div class="product-row__image-wrapper">
+        <div class="product-row__image product-row__image--notebook">
+        <span>🖱️</span>
+        </div>
+    </div>
+    <div class="product-row__content">
+        <span class="product-row__category">Периферия</span>
+        <h3 class="product-row__title">Мышка</h3>
+        <p class="product-row__desc">Беспроводная оптическая мышь с регулировкой чувствительности. Эргономичный корпус.</p>
+        
+        <div class="product-row__footer">
+        <p class="product-row__price">Цена: 1200 руб.</p>
+        <a href="order.html" class="button button--primary">Оформить заявку</a>
+        </div>
+    </div>
+    </article>
+
+    <!-- Товар 3: Зарядное устройство -->
+    <article class="product-row">
+    <div class="product-row__image-wrapper">
+        <div class="product-row__image product-row__image--backpack">
+        <span>🔌</span>
+        </div>
+    </div>
+    <div class="product-row__content">
+        <span class="product-row__category">Аксессуары</span>
+        <h3 class="product-row__title">Зарядное устройство для ноутбука</h3>
+        <p class="product-row__desc">Компактный блок питания 65 Вт с защитой от перегрева. Подходит для большинства ноутбуков.</p>
+        
+        <div class="product-row__footer">
+        <p class="product-row__price">Цена: 2800 руб.</p>
+        <a href="order.html" class="button button--primary">Оформить заявку</a>
+        </div>
+    </div>
+    </article>
+        <!-- Товар: Наушники -->
+    <article class="product-row">
+    <div class="product-row__image-wrapper">
+        <div class="product-row__image" style="background-color: #e8eaf6;">
+        <span>🎧</span>
+        </div>
+    </div>
+    <div class="product-row__content">
+        <span class="product-row__category">Аудио</span>
+        <h3 class="product-row__title">Наушники с микрофоном</h3>
+        <p class="product-row__desc">Накладные наушники с шумоподавляющим микрофоном. Подходят для учёбы, звонков и прослушивания музыки.</p>
+        <div class="product-row__footer">
+        <p class="product-row__price">Цена: 3200 руб.</p>
+        <a href="order.html" class="button button--primary">Оформить заявку</a>
+        </div>
+    </div>
+    </article>
+
+    <!-- Товар: Веб-камера -->
+    <article class="product-row">
+    <div class="product-row__image-wrapper">
+        <div class="product-row__image" style="background-color: #e0f7fa;">
+        <span>📷</span>
+        </div>
+    </div>
+    <div class="product-row__content">
+        <span class="product-row__category">Периферия</span>
+        <h3 class="product-row__title">Веб-камера Full HD</h3>
+        <p class="product-row__desc">Веб-камера с разрешением 1080p и встроенным микрофоном. Идеальна для онлайн-занятий и видеозвонков.</p>
+        <div class="product-row__footer">
+        <p class="product-row__price">Цена: 2400 руб.</p>
+        <a href="order.html" class="button button--primary">Оформить заявку</a>
+        </div>
+    </div>
+    </article>
+
+    <!-- Товар: Коврик для мыши -->
+    <article class="product-row">
+    <div class="product-row__image-wrapper">
+        <div class="product-row__image" style="background-color: #fce4ec;">
+        <span>🖱️</span>
+        </div>
+    </div>
+    <div class="product-row__content">
+        <span class="product-row__category">Аксессуары</span>
+        <h3 class="product-row__title">Коврик для мыши</h3>
+        <p class="product-row__desc">Большой тканевый коврик с прошитыми краями. Не скользит и защищает стол от царапин.</p>
+        <div class="product-row__footer">
+        <p class="product-row__price">Цена: 600 руб.</p>
+        <a href="order.html" class="button button--primary">Оформить заявку</a>
+        </div>
+    </div>
+    </article>
+  </div>
+
+    <section class="comparison-section">
+    <h2>Сравнение товаров</h2>
+    <h3>Основные характеристики товаров</h3>
+    
+    <div class="table-wrapper">
+        <table class="comparison-table">
+        <thead>
+            <tr>
+            <th>Характеристика</th>
+            <th>Клавиатура</th>
+            <th>Мышка</th>
+            <th>Зарядное устройство</th>
+            <th>Наушники</th>
+            <th>Веб-камера</th>
+            <th>Коврик для мыши</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+            <td>Категория</td>
+            <td>Периферия</td>
+            <td>Периферия</td>
+            <td>Аксессуары</td>
+            <td>Аудио</td>
+            <td>Периферия</td>
+            <td>Аксессуары</td>
+            </tr>
+            <tr>
+            <td>Применение</td>
+            <td>Набор текста</td>
+            <td>Управление курсором</td>
+            <td>Питание ноутбука</td>
+            <td>Звук и связь</td>
+            <td>Видеосвязь</td>
+            <td>Комфорт при работе</td>
+            </tr>
+            <tr>
+            <td>Особенность</td>
+            <td>Механические переключатели</td>
+            <td>Беспроводная, эргономичная</td>
+            <td>65 Вт, защита от перегрева</td>
+            <td>Шумоподавляющий микрофон</td>
+            <td>1080p, встроенный микрофон</td>
+            <td>80×30 см, нескользящий</td>
+            </tr>
+            <tr>
+            <td>Цена</td>
+            <td>3500 руб.</td>
+            <td>1200 руб.</td>
+            <td>2800 руб.</td>
+            <td>3200 руб.</td>
+            <td>2400 руб.</td>
+            <td>600 руб.</td>
+            </tr>
+        </tbody>
+        </table>
+    </div>
+    </section>
+  <!-- Блок помощи -->
+  <section class="help-banner">
+    <h3>Нужна помощь с выбором?</h3>
+    <p>Выберите товар в форме заявки или свяжитесь с нами через страницу контактов.</p>
+    <a href="contacts.html" class="help-banner__link">Перейти к контактам</a>
+  </section>
+
+
+</main>
+   
+
+
+  
+        <footer id="contacts">
+            <p>&copy; 2026 Учебный проект. Все права защищены.</p>
+            <p>Дисциплина: Фронтенд и бэкенд разработка</p>
+        </footer>
+
+    </main>
+
+    <button class="scroll-top" type="button" aria-label="Наверх">↑</button>
+    <script src="js/scroll-top.js"></script>
+</body>
+</html>
