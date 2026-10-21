@@ -410,19 +410,43 @@ div[id],
 .catalog-filters {
   grid-area: filters;
   padding: var(--space-md);
+  padding-bottom: var(--space-lg); /* Добавим немного места снизу внутри блока */
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
   background-color: var(--color-surface);
+  
+  /* Делаем блок липким */
+  position: sticky;
+  top: 120px; /* Отступ сверху */
 }
 
 .catalog-products {
   grid-area: products;
 }
 
+.catalog-filters {
+  grid-area: filters;
+  padding: var(--space-md);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background-color: var(--color-surface);
+  
+  position: sticky;
+  top: 140px; 
+  max-height: calc(100vh - 120px); 
+}
 
 .filters-form {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: var(--space-md);
+}
+
+.filters-form button[type="submit"] {
+  display: block;
+  margin: 0px auto 0 auto;
+  width: 70%; 
+  max-width: 200px; 
 }
 
 .filters-form fieldset {
@@ -716,4 +740,164 @@ header {
 /* Отступ для main, чтобы контент не прилипал к шапке */
 main {
   padding-top: var(--space-lg);
+}
+
+
+/* ===============================
+   Стили для страницы Отзывов
+   =============================== */
+
+
+.reviews-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+    margin-bottom: var(--space-xl);
+}
+
+/* Сама карточка с рамкой */
+.review-card {
+    padding: var(--space-lg);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    background-color: var(--color-bg);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* --- Блок с товаром (Шапка отзыва) --- */
+.review-card__product-info {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    padding-bottom: var(--space-md);
+    margin-bottom: var(--space-md);
+    border-bottom: 1px solid var(--color-border);
+}
+
+/* Квадратик с эмодзи (картинкой) */
+.review-card__product-img {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    border-radius: var(--radius-sm);
+    flex-shrink: 0; /* Чтобы картинка не сжималась */
+}
+
+/* Текстовая часть: название и дата */
+.review-card__product-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.review-card__product-name {
+    font-weight: 700;
+    color: var(--color-primary); /* Синий цвет, чтобы выделялось */
+    font-size: 16px;
+}
+
+.review-card__date {
+    font-size: 13px;
+    color: var(--color-muted);
+}
+
+/* --- Блок с самим отзывом --- */
+.review-card__content {
+    display: flex;
+    flex-direction: column;
+}
+
+.review-card__author {
+    margin: 0 0 var(--space-xs) 0;
+    font-size: 18px;
+    color: var(--color-text);
+}
+
+/* Желтые звездочки */
+.review-card__rating {
+    color: #f5b301;
+    font-size: 20px;
+    margin-bottom: var(--space-sm);
+    letter-spacing: 2px;
+}
+
+.review-card__text {
+    margin: 0;
+    line-height: 1.6;
+    color: var(--color-text);
+}
+
+/* ===============================
+   Стили для страницы FAQ (Вопросы)
+   =============================== */
+
+.faq-section {
+    max-width: 800px; /* Ограничиваем ширину для удобства чтения */
+    margin-bottom: var(--space-xl);
+}
+
+/* Карточка вопроса */
+.faq-item {
+    background-color: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    margin-bottom: var(--space-md);
+    overflow: hidden; /* Чтобы скругленные углы работали корректно */
+}
+
+/* Заголовок вопроса (на что нажимать) */
+.faq-item__question {
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--color-text);
+    padding: var(--space-md) var(--space-lg);
+    cursor: pointer;
+    list-style: none; /* Убираем стандартный маркер (треугольник) */
+    position: relative;
+    user-select: none;
+    transition: background-color 0.2s;
+}
+
+/* Убираем стандартный маркер в браузерах WebKit (Chrome, Safari) */
+.faq-item__question::-webkit-details-marker {
+    display: none;
+}
+
+/* Добавляем свой плюсик/крестик */
+.faq-item__question::after {
+    content: '+';
+    position: absolute;
+    right: var(--space-lg);
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    font-weight: 400;
+    color: var(--color-primary);
+    transition: transform 0.3s ease;
+}
+
+/* Когда блок открыт, меняем плюс на минус (поворачиваем) */
+.faq-item[open] .faq-item__question::after {
+    transform: translateY(-50%) rotate(45deg);
+}
+
+/* Эффект при наведении на вопрос */
+.faq-item__question:hover {
+    background-color: var(--color-surface);
+}
+
+/* Ответ внутри */
+.faq-item__answer {
+    padding: 0 var(--space-lg) var(--space-lg);
+    color: var(--color-muted);
+    line-height: 1.6;
+    border-top: 1px solid var(--color-border);
+    background-color: var(--color-surface-accent); /* Легкий голубой фон для ответа */
+    padding-top: var(--space-md);
+}
+
+.faq-item__answer p {
+    margin: 0;
 }
